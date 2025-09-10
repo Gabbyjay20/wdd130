@@ -1,0 +1,50 @@
+/* Main content */
+main {
+    width: 800px;
+    /* limits width */
+    margin: 0 auto;
+    /* centers content */
+}
+
+/* Profile image inside main only */
+main img {
+    width: 150px;
+    height: auto;
+    /* keeps aspect ratio */
+}
+
+/* Remove padding from paragraphs */
+p {
+    padding: 0;
+}
+
+/* Aside styling */
+aside {
+    width: 250px;
+    margin: 20px;
+    border: 2px solid #333;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Aside image */
+aside img {
+    width: 200px;
+    height: auto;
+    /* keeps aspect ratio */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+
+/* Optional: Simple nav styling */
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+}
