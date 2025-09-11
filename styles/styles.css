@@ -22,7 +22,7 @@ main h1 {
     color: #2c3e50;
 }
 
-main img {
+img {
     width: 200px;
     height: auto;
     border: 2px solid #333;
