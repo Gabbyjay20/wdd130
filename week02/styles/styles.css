@@ -1,19 +1,34 @@
-/* Main content */
-main {
-    width: 800px;
-    /* limits width */
-    margin: 0 auto;
-    /* centers content */
+/* Navigation styling */
+nav {
+    background-color: #333;
+    padding: 10px;
 }
 
-/* Profile image inside main only */
+nav a {
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h1 {
+    color: #333;
+}
+
 main img {
     width: 150px;
     height: auto;
-    /* keeps aspect ratio */
+    border: 2px solid #333;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Remove padding from paragraphs */
 p {
     padding: 0;
 }
@@ -28,11 +43,9 @@ aside {
     color: #000;
 }
 
-/* Aside image */
 aside img {
     width: 200px;
     height: auto;
-    /* keeps aspect ratio */
 }
 
 /* Footer styling */
@@ -40,11 +53,4 @@ footer {
     margin-top: 20px;
     border-top: 2px solid #333;
     text-align: center;
-}
-
-/* Optional: Simple nav styling */
-nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
 }
