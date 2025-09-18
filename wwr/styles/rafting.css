@@ -1,127 +1,287 @@
-/* CSS VARIABLES */
+/* CSS Variables */
 :root {
-    --primary-color: #005f73;
-    --accent1-color: #0a9396;
-    --accent2-color: #94d2bd;
-    --heading-font: 'Georgia', serif;
-    --body-font: Arial, sans-serif;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent1-color: #e74c3c;
+    --accent2-color: #f1c40f;
+    --heading-font: 'Arial Black', sans-serif;
+    --body-font: 'Arial', sans-serif;
+    --nav-background: #ecf0f1;
+    --hero-overlay: rgba(0, 0, 0, 0.5);
 }
 
-/* RESET */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* Base Styles */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--primary-color);
     line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-/* LAYOUT WIDTH */
 header,
 main,
 footer {
-    width: 840px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* HEADINGS */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* NAV + GENERAL TEXT SPACING */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* HEADER */
+/* Header */
 header {
+    background-color: var(--nav-background);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
 
-header img {
-    max-height: 60px;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-/* HERO SECTION */
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero img {
-    width: 100%;
-    height: auto;
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* HERO TITLE OVERLAY */
 .hero h1 {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 2.5rem;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 20px;
+    background-color: var(--hero-overlay);
 }
 
-/* HERO ARTICLE OVERLAY */
 .hero article {
     position: absolute;
-    bottom: 10%;
-    right: 5%;
+    bottom: 20px;
+    right: 20px;
     width: 300px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* IMAGE FLOAT INSIDE ARTICLE */
 .hero article img {
     float: right;
-    margin: 0 0 0.5rem 0.5rem;
-    max-width: 100px;
-    border-radius: 6px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: 3px solid var(--accent2-color);
 }
 
-/* FOOTER */
-footer {
+/* Main Content */
+.content-section {
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--accent2-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.history-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.history-section img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Adventures */
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.adventure-item {
+    position: relative;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.adventure-item:hover {
+    transform: translateY(-5px);
+}
+
+.adventure-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.adventure-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
     text-align: center;
-    padding: 1rem;
-    background: var(--accent2-color);
-    margin-top: 20px;
+    font-weight: bold;
+    margin: 0;
 }
 
-footer p {
-    margin-bottom: 0.5rem;
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-top: 50px;
 }
 
-/* SOCIAL MEDIA LINKS */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
 .socialmedia a {
+    color: white;
     text-decoration: none;
-    /* removes underline */
-    margin: 0 8px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.socialmedia img {
-    width: 30px;
-    height: 30px;
+.socialmedia a:hover {
+    background-color: var(--accent2-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero article {
+        width: 80%;
+        right: 10%;
+    }
+
+    .history-section {
+        flex-direction: column;
+    }
+
+    .history-section img {
+        width: 100%;
+    }
+
+    .adventures {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .adventures {
+        grid-template-columns: 1fr;
+    }
 }
