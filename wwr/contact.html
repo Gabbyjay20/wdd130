@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact Us – Rapid Adventures</title>
     <meta name="description" content="Contact Rapid Adventures for reservations, inquiries, or suggestions.">
     <meta name="author" content="Gabriel James">
-    <title>Contact Us – Rapid Adventures</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <div class="logo"><img src="images/logo.png" alt="Rapid Adventures Logo">
+            <div class="logo">
+                <img src="images/logo.png" alt="Rapid Adventures Logo">
                 <h1>Rapid Adventures</h1>
             </div>
             <nav>
@@ -21,11 +22,12 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
         <!-- Company Info -->
         <section class="company-info">
@@ -40,8 +42,7 @@
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512723.2808224335!2d-124.5963318852782!3d37.15173258044211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80a0a21d9ecc58bd%3A0xcf3e8b295a1b3cd2!2sHumboldt-Toiyabe%20National%20Forest!5e0!3m2!1sen!2sng!4v1759470039402!5m2!1sen!2sng"
-                    style="border:0; width:100%; height:100%; min-height:400px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
@@ -57,16 +58,25 @@
 
                     <fieldset>
                         <legend>Message Purpose</legend>
-                        <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                        <label for="general">
+                            <input type="radio" id="general" name="purpose" value="general" required> General Inquiry
+                        </label>
+                        <label for="reservation">
+                            <input type="radio" id="reservation" name="purpose" value="reservation"> Reservation
+                            Question
+                        </label>
+                        <label for="suggestion">
+                            <input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion
+                        </label>
                     </fieldset>
 
                     <label for="message">Message</label>
                     <textarea id="message" name="message" placeholder="Type here..." required></textarea>
 
-                    <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly
-                        newsletter</label>
+                    <label for="subscribe">
+                        <input type="checkbox" id="subscribe" name="subscribe"> Please subscribe me to the monthly
+                        newsletter
+                    </label>
 
                     <button type="submit">Send Message</button>
                 </form>
@@ -78,25 +88,29 @@
             <h2>Meet Our Team</h2>
             <div class="employee-profiles">
                 <figure>
-                    <img src="images/6.png" alt="John Doe">
+                    <img src="images/6.png" alt="John Doe – Adventure Guide">
                     <figcaption>John Doe – Adventure Guide</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/5.png" alt="John Smith">
+                    <img src="images/5.png" alt="John Smith – Safety Coordinator">
                     <figcaption>John Smith – Safety Coordinator</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/7.png" alt="Emily Johnson">
+                    <img src="images/7.png" alt="Emily Johnson – Customer Support">
                     <figcaption>Emily Johnson – Customer Support</figcaption>
                 </figure>
             </div>
         </section>
+    </main>
 
-        <footer>
-            <p>&copy; 2025 Rapid Adventures | Follow us on social media</p>
-            <div class="socialmedia">
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter-logo.png" alt="Twitter"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-            </div>
-        </footer>
+    <footer>
+        <p>&copy; 2025 Rapid Adventures | Follow us on social media</p>
+        <div class="socialmedia">
+            <a href="#"><img src="images/facebook-icon.png" alt="Follow Rapid Adventures on Facebook"></a>
+            <a href="#"><img src="images/twitter-logo.png" alt="Follow Rapid Adventures on Twitter"></a>
+            <a href="#"><img src="images/instagram-icon.png" alt="Follow Rapid Adventures on Instagram"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
