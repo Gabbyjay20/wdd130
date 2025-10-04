@@ -20,7 +20,7 @@
 /* Base Styles */
 body {
     font-family: var(--body-font);
-    color: var(--primary-color);
+    color: black;
     line-height: 1.6;
     background-color: #f9f9f9;
 }
